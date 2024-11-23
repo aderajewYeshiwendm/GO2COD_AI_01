@@ -1,0 +1,42 @@
+[
+    {
+        "response_type": "greeting",
+        "pattern": "^(hello|hi|hey|good\\s?morning|good\\s?evening)$",
+        "bot_response": "Hey there! How can I assist you?",
+        "required_words": [],
+        "follow_up": "If you need help with something, just let me know!"
+    },
+    {
+        "response_type": "farewell",
+        "pattern": "^(bye|goodbye|see\\s?you\\s?later|take\\s?care)$",
+        "bot_response": "Goodbye! Have a great day!",
+        "required_words": []
+        
+    },
+    {
+        "response_type": "question",
+        "pattern": "\\b(how|are)\\s?(are|r)?\\s?(you|u)\\b.*",
+        "bot_response": "I'm just a bot, but I'm doing great! How about you?",
+        "required_words": ["how", "are", "you"]
+        
+    },
+    {
+        "response_type": "greeting",
+        "pattern": "doing\\s?(great|good)",
+        "bot_response": "That is good to hear!",
+        "required_words": ["great", "good"]
+    },
+    {
+        "response_type": "advice",
+        "pattern": "learn\\s?(code|coding|programming)",
+        "bot_response": "I recommend starting with free resources like Codecademy, freeCodeCamp, or W3Schools.",
+        "required_words": ["learn", "coding"],
+        "follow_up": "Would you like me to help you find more learning resources?"
+    },
+    {
+        "response_type":"advice",
+        "pattern":"yes\\s?(please)",
+        "bot_response":"start with python which has easy syntax for beginners stick to it for atleast 6-months and then continue to learn web-development, AI-Engineer,...",
+        "required_words":["yes","please"]
+    }
+]
