@@ -9,16 +9,11 @@ nltk.download('stopwords')
 
 app = Flask(__name__)
 
-
 def load_responses():
-
     with open("./response_mappings.json","r") as responses_file:
         return json.load(responses_file)
 
-
-
 def random_string():
-
     fallback_responses = [
         "Please try writing something more descriptive.",
         "Oh! It appears you wrote something I don't understand yet.",
@@ -29,7 +24,6 @@ def random_string():
     return random.choice(fallback_responses)
 
 def extract_keywords(user_input):
-
     try:
         tokens = nltk.word_tokenize(user_input.lower())
         stopwords = set(nltk.corpus.stopwords.words('english'))
@@ -40,7 +34,6 @@ def extract_keywords(user_input):
         return []
 
 def get_response(user_input, responses):
-
     user_input = user_input.lower().strip()
     user_keywords = extract_keywords(user_input)
 
@@ -78,9 +71,8 @@ def chat():
     user_input = request.form.get("user_input", "").strip()
     responses = load_responses()
     bot_response = get_response(user_input, responses)
+
     return jsonify({"user_input": user_input, "bot_response": bot_response})
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-app=app
