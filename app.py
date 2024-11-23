@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 def load_responses():
 
-    with open("response_mappings.json","r") as responses_file:
+    with open("../response_mappings.json","r") as responses_file:
         return json.load(responses_file)
 
 
@@ -82,3 +82,5 @@ def chat():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+app=app
