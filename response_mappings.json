@@ -9,7 +9,7 @@
     {
         "response_type": "farewell",
         "pattern": "^(bye|goodbye|see\\s?you\\s?later|take\\s?care)$",
-        "bot_response": "Goodbye! Have a great day!",
+        "bot_response": "Goodbye! Have a great time!",
         "required_words": []
         
     },
